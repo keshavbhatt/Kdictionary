@@ -83,7 +83,7 @@ parts:
             - wordnet
             - xclip
      stage:
-            - -bin/wn
+            - -usr/bin/wn
    app-assets:
      plugin: dump
      source: assets/
