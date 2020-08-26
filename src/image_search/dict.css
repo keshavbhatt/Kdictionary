@@ -1,0 +1,73 @@
+/** webkit scrolls**/
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #B7B7B7;
+  border: 0px none #ffffff;
+  border-radius: 0px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B7B7B7;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #B7B7B7;
+}
+::-webkit-scrollbar-track {
+  background: #323232;
+  border: 0px none #ffffff;
+  border-radius: 0px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #323232;
+}
+::-webkit-scrollbar-track:active {
+  background: #323232;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+/** webkit scrolls**/
+
+
+
+/* Einfügen in die css-Datei */
+
+/* Responsive Image */
+img {
+ height: auto;
+ max-width: 100%;
+}
+
+.image-table {
+ border: 0px solid rgba(0, 0, 0, 0);
+ border-collapse: separate;
+ border-spacing: 6px;
+ table-layout: fixed;
+ text-align: center;
+ width: 100%;
+}
+
+/* OPTIONAL - Bild mit Rahmen */
+.image-table img {
+ border: 10px solid #fff;
+ box-sizing: border-box;
+ -webkit-box-shadow: 0 0 10px #999;
+ box-shadow: 0 0 10px #999;
+}
+
+body{
+height:inherit !important;
+color: white !important;
+background:url('http://ktechpit.com/wiktionary/wikipedia_api/mainfeatures.png');
+background-size:cover;
+background-color: transparent !important;
+background-repeat: no-repeat;
+background-attachment: fixed;
+}

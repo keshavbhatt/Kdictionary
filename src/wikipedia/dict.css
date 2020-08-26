@@ -1,0 +1,118 @@
+/** webkit scrolls**/
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #B7B7B7;
+  border: 0px none #ffffff;
+  border-radius: 0px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B7B7B7;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #B7B7B7;
+}
+::-webkit-scrollbar-track {
+  background: #323232;
+  border: 0px none #ffffff;
+  border-radius: 0px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #323232;
+}
+::-webkit-scrollbar-track:active {
+  background: #323232;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+/** webkit scrolls**/
+
+body{
+height:inherit !important;
+color: white !important;
+background:url('http://ktechpit.com/wiktionary/wikipedia_api/mainfeatures.png');
+background-size:cover;
+background-color: transparent !important;
+background-repeat: no-repeat;
+background-attachment: fixed;
+}
+
+.inqbox-content {
+background-color: transparent !important;
+color: white !important;
+padding: 0px !important;
+border-color: transparent !important;
+border-image: none !important;
+border-style: none !important;
+border-width: 0pc !important;
+-webkit-box-shadow: none !important;
+box-shadow: none !important;
+}
+
+.infobox ,.vertical-navbox ,.nowraplinks {
+color: white !important;
+border: 1px dashed !important;
+background: transparent !important;
+border-color:#3DAEE9 !important;
+}
+
+.col-lg-12{
+padding-right:0px !important;
+padding-left:0px !important;
+}
+
+a:-webkit-any-link{
+        font-family: Ubuntu;
+        font-size: 16px;
+        font-style: bold;
+        font-variant: normal;
+        line-height: 18.5714px;
+        color:#3DAEE9 !important;
+}
+
+th.description ,th.summary{
+    background-color: rgb(29, 29, 29)!important;
+}
+
+.hr-line-dashed {
+border-top: 1px dashed #3DAEE9 !important ;
+background: transparent !important;
+}
+
+span.text-navy{
+    color:#3DAEE9 !important;
+}
+
+th{
+    background-color: transparent !important;
+    color: white !important;
+}
+
+.thumbinner{
+border:0px !important;
+margin: 15px !important;
+width: 235px;
+min-height: inherit !important;
+overflow: visible !important;
+border-left: 0px solid #CCC !important;
+border-right: 0px solid #CCC !important;
+padding: 0px !important;
+}
+
+.thumbinner img{
+margin: 0px !important;
+}
+
+.label {
+background-color: transparent !important;;
+color: white !important;
+}
+

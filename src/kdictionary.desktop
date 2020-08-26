@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+GenericName=KDictionary
+Name=KDictionary
+Type=Application
+Icon=${SNAP}/meta/gui/icon.png
+Keywords=Dictionary;KDict;Artha;treasure;golden;dict;Meaning
+Exec=kdictionary %F
+Categories=Utility;Education;Office;
+Terminal=false

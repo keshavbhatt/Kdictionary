@@ -1,0 +1,38 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/Browser/button_check.png</file>
+        <file>images/Browser/button_play.png</file>
+        <file>images/Browser/button_rotate_ccw.png</file>
+        <file>images/Browser/internet.png</file>
+        <file>images/Browser/navigation_down_button.png</file>
+        <file>images/Browser/navigation_left_button.png</file>
+        <file>images/Browser/navigation_right_button.png</file>
+        <file>images/Browser/navigation_right_button 2.png</file>
+        <file>images/Browser/navigation_right_frame.png</file>
+        <file>images/Browser/navigation_up_button.png</file>
+        <file>images/Browser/question_button.png</file>
+        <file>images/Browser/navigation_home.png</file>
+        <file>images/Browser/navigation_stop.png</file>
+        <file>browser/button_check_frame.png</file>
+        <file>browser/button_check.png</file>
+        <file>browser/button_Pay_frame.png</file>
+        <file>browser/button_play.png</file>
+        <file>browser/button_rotate_ccw.png</file>
+        <file>browser/developed_by.png</file>
+        <file>browser/home_new.png</file>
+        <file>browser/internet.png</file>
+        <file>browser/jj.gif</file>
+        <file>browser/navigation_down_button.png</file>
+        <file>browser/navigation_home.png</file>
+        <file>browser/navigation_left_button.png</file>
+        <file>browser/navigation_right_button.png</file>
+        <file>browser/navigation_right_button 2.png</file>
+        <file>browser/navigation_right_frame.png</file>
+        <file>browser/navigation_stop.png</file>
+        <file>browser/navigation_up_button.png</file>
+        <file>browser/new_navigation_home.png</file>
+        <file>browser/question_button.png</file>
+        <file>browser/scroll.css</file>
+        <file>browser/writetome.png</file>
+    </qresource>
+</RCC>

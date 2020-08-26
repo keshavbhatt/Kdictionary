@@ -1,0 +1,40 @@
+<script src="jquery-2.1.4.min.js"></script>
+<script src="responsivevoice.js"></script>
+
+<script>
+$(document).ready(function() {
+var voices = responsiveVoice.getVoices();
+   mainWindow.get_voices(voices);
+});
+
+
+//to check if the permission div was popped up inside webview
+var myVar = setInterval(myTimer, 1000);
+function checkDiv(){
+var $myDiv = $('.rvNotification');
+if ($myDiv.length){
+    //allow speech
+    $('.rvButtonAllow').click();
+    clearInterval(myVar);//stop timer break loop
+  }
+}
+function myTimer(){
+    checkDiv();
+}
+</script>
+
+<div id="container">
+<input id="text_to_read" type="text" name="text" maxlength="524288">
+<button id="gspeech" class="say">Say It</button>
+<audio id="player1"  src="" class="speech" hidden></audio>
+</div>
+
+<script type="text/javascript" >
+$(document).ready(function(){
+ $('#gspeech').on('click', function(){
+        var text = $('input[name="text"]').val();
+        responsiveVoice.speak(text , mainWindow.get_selectedVoice(),{volume:1});
+    });
+});
+</script>
+
