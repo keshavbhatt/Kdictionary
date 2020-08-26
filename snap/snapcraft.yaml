@@ -1,0 +1,114 @@
+name: kdictionary
+version: '0.0.2'
+summary: Powerful Offline/Online Dictionary Application
+description: |
+  Kdictionary is a Powerful Dictionary Application for Desktop Linux Systems.Some of the 
+  features it includes are -
+  • Designed to give you the freedom to structure your studies the way you see fit the 
+  'Favorites' option allows you to create lists of words from the vast library of 
+  entries.
+  • ‘Recent’ list to easily review looked-up words.
+  • Audio pronunciation - Learn words faster by listening to how they're pronounced and 
+  reading definitions.
+  • Offline mode - No WiFi,no internet ? no problem. Kdictionary have Offline database 
+  of 1.74 lakh words which is growing daily.
+  • Offline database of words 1.74 lakh + whole Wordnet 3.1 database.
+  • Words Suggestions. 
+  • Neat definitions. 
+  • Word Pronouncements  (100+ voice types).
+  • Definitions Pronouncement  (100+ voice types).
+  • Includes 11 online Dictionaries. 
+  • Wikipedia Search (using API).
+  • Wiktionary Search (using API).
+  • Image Search/Reference for each word.
+  • Hotkey (shortcut) to Evoke quick result widget to access meaning.
+  • History for words you searched.
+  • Your favourite words.
+
+grade: stable
+confinement: strict
+icon: snap/gui/icon.png
+base: core18
+
+architectures:
+  - build-on: amd64
+    run-on: amd64
+
+apps:
+  kdictionary:
+    command: desktop-launch kdictionary
+    environment:
+       DISABLE_WAYLAND: 1
+    desktop: usr/share/applications/kdictionary.desktop
+    plugs:
+        - alsa
+        - audio-playback
+        - browser-support
+        - desktop
+        - desktop-legacy
+        - gsettings
+        - home
+        - mount-observe
+        - network
+        - opengl
+        - unity7
+        - wayland
+        - x11
+  wordnet:
+    command: wn
+
+plugs:
+  gsettings:
+  gtk-3-themes:
+    interface: content
+    target: $SNAP/data-dir/themes
+    default-provider: gtk-common-themes
+  icon-themes:
+    interface: content
+    target: $SNAP/data-dir/icons
+    default-provider: gtk-common-themes
+  sound-themes:
+    interface: content
+    target: $SNAP/data-dir/sounds
+    default-provider: gtk-common-themes
+  qt551:
+    interface: content
+    target: $SNAP/qt551
+    default-provider: qt551
+
+parts:
+   deps:
+     plugin: nil
+     stage-packages:
+            - wordnet
+            - xclip
+   app-assets:
+     plugin: dump
+     source: assets/
+   application:
+     source-type: local
+     source: src/
+     plugin: qmake
+     qt-version: qt5
+     override-build: |
+            snapcraftctl build
+            sed -i 's|Icon=.*|Icon=${SNAP}/meta/gui/icon.png|g' ${SNAPCRAFT_PART_SRC}/kdictionary.desktop
+            cp -rf ${SNAPCRAFT_PART_SRC}/kdictionary.desktop ${SNAPCRAFT_PART_INSTALL}/usr/share/applications/kdictionary.desktop
+     after: [desktop-qt5]
+
+   snap-launcher:
+     plugin: dump
+     source: snap_launcher/
+   desktop-qt5:
+     plugin: nil
+     build-packages:
+       - build-essential
+       - qtbase5-dev
+       - libqt5webkit5-dev
+       - dpkg-dev
+   cleanup:
+       plugin: nil
+       override-prime: |
+          # Remove unneeded stage files to save space
+          cd usr/share
+          rm -rf apport bash-completion bug doc doc-base icons lintian man pam-configs pkgconfig themes upstart zsh
