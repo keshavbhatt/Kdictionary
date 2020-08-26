@@ -105,6 +105,7 @@ parts:
        - build-essential
        - qtbase5-dev
        - libqt5webkit5-dev
+       - libqt5x11extras5-dev
        - dpkg-dev
    cleanup:
        plugin: nil
