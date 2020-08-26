@@ -82,6 +82,8 @@ parts:
      stage-packages:
             - wordnet
             - xclip
+     stage:
+            - -bin/wn
    app-assets:
      plugin: dump
      source: assets/
