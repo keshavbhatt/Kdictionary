@@ -89,7 +89,7 @@ parts:
      source: assets/
    gstreamer:
      plugin : nil
-     stage-package:
+     stage-packages:
             - libgstreamer1.0-0
             - gstreamer1.0-plugins-good
             - gstreamer1.0-fluendo-mp3
